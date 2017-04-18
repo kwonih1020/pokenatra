@@ -1,6 +1,6 @@
-
+require "pry"
 require 'active_record'
-require 'ffaker'
+# require 'ffaker'
 require 'pg'
 require_relative 'connection'
 
@@ -37,3 +37,5 @@ pokemon_data.each_pair do |trainer_name, pokemons|
         })
     end
 end
+
+binding.pry
