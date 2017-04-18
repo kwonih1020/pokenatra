@@ -1,10 +1,10 @@
-<h2>All Trainers</h2>
+<h1>All Trainers</h1>
 <% @trainers.each do |trainer|%>
 <p class="trainer">Trainer Name:
 <a href="./trainers/<%= trainer.id %>"><%= trainer.name %></a>
 </p>
-<p class="trainer_level">Trainer Level:
-<a href="./trainers/<%= trainer.level %>"><%= trainer.level %></a>
+<p class="trainer_id">Trainer Level:
+<a href="./trainers/<%= trainer.id %>"><%= trainer.id %></a>
 </p>
 <img src="<%= trainer.img_url %>">
 <% end %>
