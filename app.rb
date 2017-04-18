@@ -11,6 +11,7 @@ require_relative 'models/trainer'
 
 get "/" do
     @trainers = Trainer.all
+    @pokemons = Pokemon.all
     erb :"trainers/index"
 end
 
@@ -20,8 +21,11 @@ end
 
 get "/trainers/:id" do
     @trainer = Trainer.find(params[:id])
+    @pokemon = Pokemon.where(trainer_id: params[:id])
     erb :"trainers/show"
 end
+
+
 
 post "/trainers" do
     @trainer = Trainer.create(name: params[:name], level: params[:id])

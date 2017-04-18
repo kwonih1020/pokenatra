@@ -1,10 +1,15 @@
-<h1>All Trainers</h1>
+<h2>All Trainers</h2>
 <% @trainers.each do |trainer|%>
 <p class="trainer">Trainer Name:
 <a href="./trainers/<%= trainer.id %>"><%= trainer.name %></a>
 </p>
-<p class="trainer_id">Trainer Level:
+<p class="trainer_id">Level:
 <a href="./trainers/<%= trainer.id %>"><%= trainer.id %></a>
 </p>
 <img src="<%= trainer.img_url %>">
 <% end %>
+
+<h2>All Pokemons</h2>
+  <% @pokemons.each do |pokemon|%>
+    <p><%= pokemon.name %></p>
+  <% end %>
